@@ -1,38 +1,43 @@
 <ion-view ng-controller="DashboardCtrl">
-    <ion-content>
-        <div class="text-center">
-            <h1 class="app-title" style="color:white;">wePray</h1>
-            <h3 class="subtitle" style="color:white;">Towards Success</h3>
+    <ion-content class="dashboard">
+        <div class="card dashboard-goals text-center">
+            <div class="item item-text-wrap">
+                <h2>Daily Goal</h2>
+                <h1 class="goal">5 Salah Remaining</h1>
+                <div class="progress">
+                    <span class="progress-bar"><span class="progress-active"></span> Goal Completion rate</span> <span class="progress-text">100%</span>
+                </div>
+            </div>
         </div>
-
         <ion-list show-delete="shouldShowDelete"
                   show-reorder="shouldShowReorder"
                   can-swipe="listCanSwipe">
             <ion-item class="salah-item fajr">
                 <div class="info">
-                    <h1 class="salahName"></h1><br />
+                    <h1 class="salahName"></h1>
                     <div class="last-prayer-markers">
                         <div class="pan">
-                            Last 3: 
+                            Last 3:
                             <span class="salah-marker small"></span>
                             <span class="salah-marker salah-qadha small"></span>
                             <span class="salah-marker salah-segregate small"></span>
                         </div>
                     </div>
                 </div>
-                <div class="controls"></div>
-                <p>{{prayTimesToday.fajr}}</p>
-                <ion-option-button class="button-positive"
-                                   ng-click="markSalah('06/20/2015', 'fajr', 'segregation')">
-                    Segr
-                </ion-option-button>
-                <ion-option-button class="button-info"
+                <div class="controls">{{prayTimesToday.fajr}}</div>
+
+                <ion-option-button class="button salah-congregate text-center"
                                    ng-click="markSalah('06/20/2015', 'fajr', 'congregation')">
-                    Cong
+                    <span class="ion-man"></span><span class="ion-man"></span><span class="ion-man"></span>
                 </ion-option-button>
-                <ion-option-button class="button-danger"
+                <ion-option-button class="button salah-segregate text-center"
+                                   ng-click="markSalah('06/20/2015', 'fajr', 'segregation')">
+                    <span class="ion-man"></span>
+                </ion-option-button>
+
+                <ion-option-button class="button salah-qadha text-center"
                                    ng-click="markSalah('06/20/2015', 'fajr', 'qadha')">
-                    Qadha
+                    <span class="ion-clock"></span>
                 </ion-option-button>
 
                 <!--To be used in Qadha and Missed screens
@@ -46,11 +51,20 @@
 
             </ion-item>
 
-            <ion-item class="item-thumbnail-left">
+            <ion-item class="salah-item duhur">
+                <div class="info">
+                    <h1 class="salahName"></h1>
+                    <div class="last-prayer-markers">
+                        <div class="pan">
+                            Last 3:
+                            <span class="salah-marker small"></span>
+                            <span class="salah-marker salah-qadha small"></span>
+                            <span class="salah-marker salah-segregate small"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">{{prayTimesToday.dhuhr}}</div>
 
-                <img ng-src="{{prayTimesToday.img}}">
-                <h2>Dhuhr</h2>
-                <p>{{prayTimesToday.dhuhr}}</p>
                 <ion-option-button class="button-positive"
                                    ng-click="markSalah('06/20/2015', 'dhuhr', 'segregation')">
                     Segr
@@ -66,11 +80,21 @@
 
             </ion-item>
 
-            <ion-item class="item-thumbnail-left">
+            <ion-item class="salah-item asr">
 
-                <img ng-src="{{prayTimesToday.img}}">
-                <h2>Asr</h2>
-                <p>{{prayTimesToday.asr}}</p>
+                <div class="info">
+                    <h1 class="salahName"></h1>
+                    <div class="last-prayer-markers">
+                        <div class="pan">
+                            Last 3:
+                            <span class="salah-marker small"></span>
+                            <span class="salah-marker salah-qadha small"></span>
+                            <span class="salah-marker salah-segregate small"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">{{prayTimesToday.asr}}</div>
+
                 <ion-option-button class="button-positive"
                                    ng-click="markSalah('06/20/2015', 'asr', 'segregation')">
                     Segr
@@ -86,11 +110,21 @@
 
             </ion-item>
 
-            <ion-item class="item-thumbnail-left">
+            <ion-item class="salah-item maghrib">
 
-                <img ng-src="{{prayTimesToday.img}}">
-                <h2>Maghrib</h2>
-                <p>{{prayTimesToday.maghrib}}</p>
+                <div class="info">
+                    <h1 class="salahName"></h1>
+                    <div class="last-prayer-markers">
+                        <div class="pan">
+                            Last 3:
+                            <span class="salah-marker small"></span>
+                            <span class="salah-marker salah-qadha small"></span>
+                            <span class="salah-marker salah-segregate small"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">{{prayTimesToday.maghrib}}</div>
+
                 <ion-option-button class="button-positive"
                                    ng-click="markSalah('06/20/2015', 'maghrib', 'segregation')">
                     Segr
@@ -106,11 +140,21 @@
 
             </ion-item>
 
-            <ion-item class="item-thumbnail-left">
+            <ion-item class="salah-item esha">
 
-                <img ng-src="{{prayTimesToday.img}}">
-                <h2>Isha</h2>
-                <p>{{prayTimesToday.isha}}</p>
+                <div class="info">
+                    <h1 class="salahName"></h1>
+                    <div class="last-prayer-markers">
+                        <div class="pan">
+                            Last 3:
+                            <span class="salah-marker small"></span>
+                            <span class="salah-marker salah-qadha small"></span>
+                            <span class="salah-marker salah-segregate small"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">{{prayTimesToday.isha}}</div>
+
                 <ion-option-button class="button-positive"
                                    ng-click="markSalah('06/20/2015', 'isha', 'segregation')">
                     Segr

@@ -183,13 +183,16 @@ h1,h2,h3,h4,h5,h6{
         margin-top: 30px;
 
     }
+    h1:after{
+        z-index:9999;
+    }
 }
 .pan{
     padding:20px;
     color:white;
 }
 .goal{font-size:19.99pt;}
-#main-prayer-banner.fajr,.fajr{
+#main-prayer-banner.fajr,.fajr,.fajr .item-content{
   background: #c88850; /* Old browsers */
 background: -moz-radial-gradient(center, ellipse cover,  #c88850 1%, #4e3b69 55%); /* FF3.6+ */
 background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#c88850), color-stop(55%,#4e3b69)); /* Chrome,Safari4+ */
@@ -206,7 +209,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c88850', end
      content:'Fajr';
  }
 }
-#main-prayer-banner.duhur,.duhur,.duhur {
+#main-prayer-banner.duhur,.duhur,.duhur .item-content{
   background: #fffbb9; /* Old browsers */
 background: -moz-radial-gradient(center, ellipse cover,  #fffbb9 1%, #f5c82a 55%); /* FF3.6+ */
 background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#fffbb9), color-stop(55%,#f5c82a)); /* Chrome,Safari4+ */
@@ -224,7 +227,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffbb9', end
      color:@color-base;
  }
 }
-#main-prayer-banner.asr,.asr{
+#main-prayer-banner.asr,.asr,.asr .item-content{
   background: #c8b050; /* Old browsers */
 background: -moz-radial-gradient(center, ellipse cover,  #c8b050 1%, #c1622e 55%); /* FF3.6+ */
 background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#c8b050), color-stop(55%,#c1622e)); /* Chrome,Safari4+ */
@@ -242,7 +245,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8b050', end
      
  }
 }
-#main-prayer-banner.maghrib,.maghrib{
+#main-prayer-banner.maghrib,.maghrib,.maghrib .item-content{
   background: #509cc8; /* Old browsers */
 background: -moz-radial-gradient(center, ellipse cover,  #509cc8 1%, #2f273c 55%); /* FF3.6+ */
 background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#509cc8), color-stop(55%,#2f273c)); /* Chrome,Safari4+ */
@@ -260,7 +263,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#509cc8', end
      
  }
 }
-#main-prayer-banner.esha,.esha{
+#main-prayer-banner.esha,.esha,.esha .item-content{
   background: #509cc8; /* Old browsers */
 background: -moz-radial-gradient(center, ellipse cover,  #509cc8 1%, #2f273c 55%); /* FF3.6+ */
 background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#509cc8), color-stop(55%,#2f273c)); /* Chrome,Safari4+ */
@@ -282,7 +285,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#509cc8', end
 .salah-item{
     
     .item-content{
-        background-color:@color-google;
+        background-color:transparent;
     }
 .salahName{
     color:@color-qadha;
@@ -297,6 +300,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#509cc8', end
 }
 .salah-marker{
     border-width:2px;
+}
+h1{margin:0;margin-bottom:10px;}
+.info{
+    width:60%;
+    display:inline-block;
+}
+.controls{
+    width:39%;
+    display:inline-block;
 }
 }
 
@@ -363,3 +375,38 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#509cc8', end
         background-color:@color-qadha;
     }
 }
+
+.dashboard-goals
+{
+    background:transparent;border:5px solid @color-card;
+.item{
+    background-color:transparent;
+}
+.progress-bar{
+    display:inline-block;
+    background-color:@color-tabs;
+    border-radius:5px;
+    padding:5px;
+    overflow:hidden;
+    position:relative;
+    width:55%;
+}
+.progress-text{
+    display:inline-block;
+      width:20%;
+    padding:5px;  
+}
+.progress-active
+{
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:@color-navbar;
+    width:80%;
+    height:100%;
+    
+}
+}
+
+.mainView.has-header,.dashboard.has-header {
+  top: 0; }

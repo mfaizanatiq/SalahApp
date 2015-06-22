@@ -2,13 +2,13 @@
 <ion-pane ng-controller="ContentController">
             <ion-side-menu-content>
                 
-                <ion-content>
+                <ion-content class="mainView">
                     <div class="card">
                         <div class="item item-text-wrap text-center">
                             <h2>Daily Goal</h2>
                             <h1 class="goal">5 Salah Remaining</h1>
                             <div id="main-prayer-banner" class="col text-center duhur">
-                                <h1 id="salahName" class="text-white"></h1>
+                                <h1 class="text-white salahName"></h1>
                                 <span id="sun"></span>
                             </div>
                             
@@ -24,13 +24,13 @@
                             </div>
                         </div>
                         <div class="button-bar main-selection">
-                            <a class="button segregate">
-                                <span class="ion-man"></span><br />
-                                Segregate
-                            </a>
                             <a class="button congregate">
                                 <span class="ion-man"></span><span class="ion-man"></span><span class="ion-man"></span><br />
                                 Congregate
+                            </a>
+                            <a class="button segregate">
+                                <span class="ion-man"></span><br />
+                                Segregate
                             </a>
                             <a class="button qadha" ui-sref="app.login">
                                 <span class="ion-clock"></span><br />

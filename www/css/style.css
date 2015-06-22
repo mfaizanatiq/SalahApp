@@ -164,6 +164,9 @@ h6 {
   font-size: 34.43pt;
   margin-top: 30px;
 }
+#main-prayer-banner h1:after {
+  z-index: 9999;
+}
 .pan {
   padding: 20px;
   color: white;
@@ -172,7 +175,8 @@ h6 {
   font-size: 19.99pt;
 }
 #main-prayer-banner.fajr,
-.fajr {
+.fajr,
+.fajr .item-content {
   background: #c88850;
   /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover, #c88850 1%, #4e3b69 55%);
@@ -192,16 +196,18 @@ h6 {
   background-position-y: 80%;
 }
 #main-prayer-banner.fajr #sun,
-.fajr #sun {
+.fajr #sun,
+.fajr .item-content #sun {
   background-color: #f7ef77;
 }
 #main-prayer-banner.fajr .salahName:after,
-.fajr .salahName:after {
+.fajr .salahName:after,
+.fajr .item-content .salahName:after {
   content: 'Fajr';
 }
 #main-prayer-banner.duhur,
 .duhur,
-.duhur {
+.duhur .item-content {
   background: #fffbb9;
   /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover, #fffbb9 1%, #f5c82a 55%);
@@ -222,17 +228,18 @@ h6 {
 }
 #main-prayer-banner.duhur #sun,
 .duhur #sun,
-.duhur #sun {
+.duhur .item-content #sun {
   background-color: white;
 }
 #main-prayer-banner.duhur .salahName:after,
 .duhur .salahName:after,
-.duhur .salahName:after {
+.duhur .item-content .salahName:after {
   content: 'Duhur';
   color: #1f253d;
 }
 #main-prayer-banner.asr,
-.asr {
+.asr,
+.asr .item-content {
   background: #c8b050;
   /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover, #c8b050 1%, #c1622e 55%);
@@ -252,15 +259,18 @@ h6 {
   background-position-y: 80%;
 }
 #main-prayer-banner.asr #sun,
-.asr #sun {
+.asr #sun,
+.asr .item-content #sun {
   background-color: #7a1f06;
 }
 #main-prayer-banner.asr .salahName:after,
-.asr .salahName:after {
+.asr .salahName:after,
+.asr .item-content .salahName:after {
   content: 'Asr';
 }
 #main-prayer-banner.maghrib,
-.maghrib {
+.maghrib,
+.maghrib .item-content {
   background: #509cc8;
   /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover, #509cc8 1%, #2f273c 55%);
@@ -280,15 +290,18 @@ h6 {
   background-position-y: 80%;
 }
 #main-prayer-banner.maghrib #sun,
-.maghrib #sun {
+.maghrib #sun,
+.maghrib .item-content #sun {
   background-color: #a46146;
 }
 #main-prayer-banner.maghrib .salahName:after,
-.maghrib .salahName:after {
+.maghrib .salahName:after,
+.maghrib .item-content .salahName:after {
   content: 'Maghrib';
 }
 #main-prayer-banner.esha,
-.esha {
+.esha,
+.esha .item-content {
   background: #509cc8;
   /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover, #509cc8 1%, #2f273c 55%);
@@ -308,15 +321,17 @@ h6 {
   background-position-y: 80%;
 }
 #main-prayer-banner.esha #sun,
-.esha #sun {
+.esha #sun,
+.esha .item-content #sun {
   background-color: white;
 }
 #main-prayer-banner.esha .salahName:after,
-.esha .salahName:after {
+.esha .salahName:after,
+.esha .item-content .salahName:after {
   content: 'Esha';
 }
 .salah-item .item-content {
-  background-color: #dd4b39;
+  background-color: transparent;
 }
 .salah-item .salahName {
   color: #e64c65;
@@ -331,6 +346,18 @@ h6 {
 }
 .salah-item .salah-marker {
   border-width: 2px;
+}
+.salah-item h1 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.salah-item .info {
+  width: 60%;
+  display: inline-block;
+}
+.salah-item .controls {
+  width: 39%;
+  display: inline-block;
 }
 .salah-marker {
   width: 16px;
@@ -393,5 +420,38 @@ h6 {
 }
 .main-selection a.qadha.activated {
   background-color: #e64c65;
+}
+.dashboard-goals {
+  background: transparent;
+  border: 5px solid #394264;
+}
+.dashboard-goals .item {
+  background-color: transparent;
+}
+.dashboard-goals .progress-bar {
+  display: inline-block;
+  background-color: #50597b;
+  border-radius: 5px;
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+  width: 55%;
+}
+.dashboard-goals .progress-text {
+  display: inline-block;
+  width: 20%;
+  padding: 5px;
+}
+.dashboard-goals .progress-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #11a8ab;
+  width: 80%;
+  height: 100%;
+}
+.mainView.has-header,
+.dashboard.has-header {
+  top: 0;
 }
 /*# sourceMappingURL=style.css.map */
