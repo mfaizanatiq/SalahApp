@@ -1,8 +1,6 @@
-<ion-view class="back" animation="slide-left-right">
+<ion-view >
 <ion-pane ng-controller="ContentController">
-            <ion-side-menu-content>
-                
-                <ion-content class="mainView">
+<ion-content class="mainView" scroll="false">
                     <div class="card">
                         <div class="item item-text-wrap text-center">
                             <h2>Daily Goal</h2>
@@ -11,7 +9,6 @@
                                 <h1 class="text-white salahName"></h1>
                                 <span id="sun"></span>
                             </div>
-                            
                             <div class="text-center pan">
                                 previous salah:
                                 <span class="salah-marker"></span>
@@ -40,7 +37,6 @@
                     </div>
 
                 </ion-content>
-                <!-- Main content, usually <ion-nav-view> -->
-            </ion-side-menu-content>
+<!-- Main content, usually <ion-nav-view> -->            
 </ion-pane>
 </ion-view>

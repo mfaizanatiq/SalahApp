@@ -25,16 +25,24 @@ h6 {
   background-color: #394264;
   border-radius: 10px;
 }
-.item {
+.dashboard .item,
+.mainView .item,
+.login .item {
   background-color: #394264;
 }
-.item h1 {
+.dashboard .item h1,
+.mainView .item h1,
+.login .item h1 {
   color: white;
 }
-.item h2 {
+.dashboard .item h2,
+.mainView .item h2,
+.login .item h2 {
   color: #9099b7;
 }
-.item p {
+.dashboard .item p,
+.mainView .item p,
+.login .item p {
   color: white;
 }
 /*Button Code*/
