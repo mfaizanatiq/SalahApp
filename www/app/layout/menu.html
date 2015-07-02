@@ -2,6 +2,7 @@
     <ion-header-bar class="bar-positive">
         <button class="button icon ion-navicon" menu-toggle="left"></button>
         <h1 class="title">wePray</h1>
+        <button class="button " menu-toggle="right" ui-sref="app.main">Today</button>
     </ion-header-bar>
     <ion-pane ion-side-menu-content>
         <ion-nav-bar class="bar-balanced">
@@ -9,6 +10,7 @@
             <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
         </ion-nav-bar>
         <ion-nav-view name="mainContent" animation="slide-left-right"></ion-nav-view>
+
     </ion-pane>
 
     <ion-side-menu side="left">
@@ -20,10 +22,10 @@
                 <div class="item item-divider">
                     Prayers
                 </div>
-                <ion-item nav-clear menu-close ui-sref="app.main">Today</ion-item>
                 <ion-item nav-clear menu-close ui-sref="app.dash">My Dashboard</ion-item>
-                <ion-item nav-clear menu-close ui-sref="app.dash">Qadha Reporter</ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.reports">Qadha Reporter</ion-item>
                 <ion-item nav-clear menu-close ui-sref="app.dash">Set Goal</ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.profile">Profile</ion-item>
                 <div class="item item-divider">
                 </div>
                 <ion-item nav-clear menu-close ui-sref="app.login">Log out</ion-item>

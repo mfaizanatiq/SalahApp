@@ -180,6 +180,23 @@ Auth.$onAuth(function(authData) {
         }
       }
     })
+    .state('app.reports', {
+              url: "/reports",
+              views: {
+                  'mainContent': {
+                      templateUrl: "app/reports/reports.html"
+                  }
+              }
+          })
+
+    .state('app.profile', {
+          url: "/profile",
+          views: {
+              'mainContent': {
+                  templateUrl: "app/profile/profile.html"
+              }
+          }
+      })
 
     .state('app.dash', {
       url: "/dash",
@@ -193,5 +210,8 @@ Auth.$onAuth(function(authData) {
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/login');
 });
+
+
+
 
 
