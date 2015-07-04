@@ -85,6 +85,12 @@ Auth.$onAuth(function(authData) {
         alert('Report');
     }
 })
+
+.controller('onboardingController', function ($scope, $ionicSlideBoxDelegate) {
+    $scope.nextSlide = function () {
+        $ionicSlideBoxDelegate.next();
+    }
+})
     
 .controller('DashboardCtrl', function($scope, TrackItems) {
 
@@ -196,7 +202,14 @@ Auth.$onAuth(function(authData) {
                   templateUrl: "app/profile/profile.html"
               }
           }
-      })
+    })
+
+        .state('app.board', {
+            url: "/board",
+            templateUrl: "app/onBoarding/onBoarding.html"
+           
+        })
+
 
     .state('app.dash', {
       url: "/dash",
